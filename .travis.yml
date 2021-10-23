@@ -1,9 +1,13 @@
+# Versão do Ubuntu
+os: linux
+dist: focal
+
 # Linguagem Utilizada para Desenvolver a Aplicação
 language: python
 
 # Versão que a aplicação suporta.
 python:
-  - "3.9"
+  - "3.8"
 
 # Instalação de Módulos que são necessários para a Aplicação.
 install:
@@ -31,4 +35,4 @@ deploy:
   edge: true 
   app: devopslab-kleberson
   on:
-      branch: main
+  branch: main
