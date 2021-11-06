@@ -47,3 +47,20 @@ jobs:
       name: GET URL Stage
       script:
         - curl https://devopslab-kleberson.herokuapp.com/ | grep Hello || travis_terminate 1;
+    - stage: Production Deploy
+      name: Google Api Engine
+      script: skip
+      # Definir o Deploy no Google Cloud
+      deploy:
+        provider: gae
+        keyfile: ../gcpterraformkey.json
+        project: labdevopscloudkleberson
+        on:
+          branch: main
+    - stage: Production Test
+      name: GET URL Production
+      script:
+        - curl https://labdevopscloudkleberson.uc.r.appspot.com/ | grep Hello || travis_terminate 1;
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_7160780ec53e_key -iv $encrypted_7160780ec53e_iv -in gcpterraformkey.json.enc -out ../gcpterraformkey.json -d
