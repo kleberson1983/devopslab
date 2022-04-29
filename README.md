@@ -9,7 +9,7 @@ Ha duas pipelines configuradas para realizar o CI/CD da app, uma no travis e out
 
 O ambiente de STG esta no Heroku. O ambiente de Prod esta no GCP App Engine.
 
-Ambas pipelines podem ser configuradas para iniciar a partir de qualquer commit neste repositorio, entretanto como Github Actions foi feito por ultimo a opcao de buildar a pipeline do Travis esta desativada, portanto mediante ao commit apenas Github Actions sera iniciado.
+Ambas pipelines podem ser configuradas para iniciar a partir de qualquer commit neste repositorio, entretanto como Github Actions foi feito por ultimo a opcao de buildar a pipeline do Travis esta desativada, portanto mediante ao commit apenas Github Actions sera iniciado
 
 # Testes & Vulnerabilidates
 Como parte do opcional da aula, a app tambem esta integrada ao SonarCloud, como pode-se notar no badge acima.
